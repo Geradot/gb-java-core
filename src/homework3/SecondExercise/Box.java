@@ -33,7 +33,7 @@ public class Box<T extends Fruit> {
     }
 
     // пересып из одной коробки в другую
-    public void intersperseInto(Box<T> fruitBox) {
+    public void intersperseFrom(Box<T> fruitBox) {
         this.list.addAll(fruitBox.list);
         fruitBox.list.clear();
     }
