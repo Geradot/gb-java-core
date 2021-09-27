@@ -11,7 +11,7 @@ public class Box<T extends Fruit> {
     }
 
     public void setList(ArrayList<T> list) {
-        this.list = list;
+        this.list.addAll(list);
     }
 
     // добавление фрукта
@@ -33,9 +33,9 @@ public class Box<T extends Fruit> {
     }
 
     // пересып из одной коробки в другую
-    public void intersperseFrom(Box<T> fruitBox) {
-        this.list.addAll(fruitBox.list);
-        fruitBox.list.clear();
+    public void intersperseInto(Box<T> fruitBox) {
+        fruitBox.setList(this.list);
+        this.list.clear();
     }
 }
 

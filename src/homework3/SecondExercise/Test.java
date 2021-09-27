@@ -34,7 +34,7 @@ public class Test {
 
         // пересыпаем в другую коробку
         System.out.println("Пересыпаем из одной коробки в другую...");
-        appleBox2.intersperseFrom(appleBox);
+        appleBox.intersperseInto(appleBox2);
 
         System.out.print("Вес коробки appleBox: ");
         try {
@@ -47,7 +47,7 @@ public class Test {
         try {
             System.out.println(appleBox2.getWeight());
         } catch (MyException e) {
-            System.err.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
 
     }
